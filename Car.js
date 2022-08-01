@@ -6,15 +6,14 @@ class Car {
 		this.height = height;
 	}
 
-	update() {
-		if (this.controls.forward) {
+	update(controls) {
+		if (controls.forward) {
 			this.y -= 2;
 		}
-		if (this.controls.reverse) {
-			this.y = 2;
+		if (controls.reverse) {
+			this.y += 2;
 		}
 	}
-
 	draw(ctx) {
 		ctx.beginPath();
 		ctx.rect(
